@@ -209,7 +209,7 @@ header.hero:after{content:"INSIDE JAPAN · ART · CULTURE · HIKING";display:blo
   function updateClocks(){const now=new Date();const timeOpts={hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'};const dateOpts={weekday:'short',day:'numeric',month:'short',year:'numeric'};document.getElementById('japan-clock').textContent=new Intl.DateTimeFormat('en-GB',{...timeOpts,timeZone:'Asia/Tokyo'}).format(now);document.getElementById('japan-date').textContent=new Intl.DateTimeFormat('en-GB',{...dateOpts,timeZone:'Asia/Tokyo'}).format(now);document.getElementById('uk-clock').textContent=new Intl.DateTimeFormat('en-GB',{...timeOpts,timeZone:'Europe/London'}).format(now);document.getElementById('uk-date').textContent=new Intl.DateTimeFormat('en-GB',{...dateOpts,timeZone:'Europe/London'}).format(now)}updateClocks();setInterval(updateClocks,1000);
   const tripStart='2026-11-01',tripEnd='2026-11-19',grid=document.getElementById('calendar-grid'),title=document.getElementById('journal-date-title'),titleInput=document.getElementById('journal-title'),textInput=document.getElementById('journal-text'),status=document.getElementById('journal-status');let selected='2026-11-01';
   const SUPABASE_URL='https://qhtgelfjqdmamsobydg.supabase.co';
-  const SUPABASE_PUBLISHABLE_KEY='sb_publishable_7iF2AsYuJd_HO6X33JYWCQ_m47tbKdL';
+  const SUPABASE_PUBLISHABLE_KEY='sb_publishable_7iF2AsYuJd_HO6X33JYwCQ_m47tbKdL';
   const supabaseClient=window.supabase&&window.supabase.createClient?window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY):null;
   let sharedEntries={};
   function pretty(k){const [y,m,d]=k.split('-').map(Number);return new Date(y,m-1,d).toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
